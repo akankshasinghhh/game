@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <title>RockPaperScissors</title>
+</head>
+<body>
+    <div id="container" class="">
+        <div id="title">Rock <br> Paper <br> Scissors</div>
+        <div id="gameContainer" class="border flex">
+            <div id="startGame" class="pointer" onclick="startGame()">Start</div>
+            <div id="round" class="hidden"></div>
+            <div class="border horizontalRule hidden"></div>
+            <div id="playerSelect" class="hidden flex">
+                <img src="media/rock.jpeg" alt="rock" onclick="playRound(1)" class="pointer imgSize" id="rockImage">
+                <img src="media/paper.jpeg" alt="paper" onclick="playRound(2)" class="pointer imgSize" id="paperImage">
+                <img src="media/scissors.jpeg" alt="scissors" onclick="playRound(3)" class="pointer imgSize" id="scissorsImage">
+                <p class="purpleText">Click on your choice</p>
+            </div>
+            <div id="showCurrent" class="hidden">
+                <p id="you">You</p>
+                <img src="" alt="player choice" id="playerChoice" class="imgSize">
+                <p id="computer">Computer</p>
+                <img src="" alt="computer choice" id="computerChoice" class="imgSize">
+                
+                <p id="result" class="purpleText"></p>
+            </div>
+            <div class="border horizontalRule hidden"></div>
+            <div id="gameScore" class="flex hidden">
+                <div id="showScore" class="purpleText">
+                    <p id="playerScore"></p>
+                    <p id="computerScore"></p>
+                </div>
+                <div id="nextRound" class="border pointer" onclick="nextRound()">Next Round</div>
+            </div>
+        </div>
+        <div id="endGame" class="hidden flex">
+            <div id="finalScorePlayer"></div>
+            <div id="finalScoreComputer"></div>
+            <div id="finalScoreTies"></div>
+            <div class="border horizontalRule"></div>
+            <div id="finalText"></div>
+            <img src="" alt="" id="finalImage" class="imgSize">
+            <p class="greenText pointer border" onclick="window.location.reload()" id="restart">Click here to restart</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
